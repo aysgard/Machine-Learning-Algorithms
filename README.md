@@ -1,4 +1,4 @@
-# Machine Learning & Deep Learning Implementations (MATH 482)
+# Machine Learning & Deep Learning Implementations 
 
 A consolidated repository containing five end-to-end machine learning and deep learning projects developed on Kaggle for the **MATH 482** course. The collection covers the progression from domain-specific continuous regression to advanced feature engineering on noisy synthetic spaces, multi-layer perceptrons, and convolutional neural networks.
 
@@ -7,9 +7,7 @@ A consolidated repository containing five end-to-end machine learning and deep l
 ## Table of Contents
 
 - [Overview & Objectives](#overview--objectives)
-- [Repository Structure](#repository-structure)
 - [Technologies & Tooling](#technologies--tooling)
-  - [Core Stack](#core-stack)
 - [Projects Index](#projects-index)
 - [Detailed Project Breakdown](#detailed-project-breakdown)
   - [Project 1: Wild Blueberry Yield Prediction](#project-1-wild-blueberry-yield-prediction)
@@ -31,52 +29,10 @@ The primary goals demonstrated across this work include:
 - Architectural tuning and regularization of deep feedforward neural networks (MLPs) against complex decision surfaces.
 - Training computer vision architectures (CNNs) capable of classifying synthetic shapes across varying orientations, background artifacts, and occluding noise.
 
----
-
-## Repository Structure
-
-```text
-Machine-Learning-Algorithms/
-│
-├── README.md
-├── requirements.txt
-│
-├── 01-blueberry-yield-prediction/
-│   ├── notebook.ipynb
-│   ├── train.csv
-│   ├── test.csv
-│   └── sample_submission.csv
-│
-├── 02-multiclass-noise-filtering/
-│   ├── notebook.ipynb
-│   ├── train_2.csv
-│   ├── test_2.csv
-│   └── sample_submission_2.csv
-│
-├── 03-mixed-type-regression/
-│   ├── notebook.ipynb
-│   ├── train_3.csv
-│   ├── test_3.csv
-│   └── sample_submission_3.csv
-│
-├── 04-deep-tabular-classification/
-│   ├── notebook.ipynb
-│   ├── train_4.csv
-│   ├── test_4.csv
-│   └── sample_submission_4.csv
-│
-└── 05-shape-image-cnn/
-    ├── notebook.ipynb
-    ├── class_map.csv
-    ├── sample_submission_5.csv
-    └── data/                   # Train and test image directories
-```
-
----
+--- 
 
 ## Technologies & Tooling
 
-### Core Stack
 - **Languages & Environments:** Python 3.9+, Jupyter Notebooks, Kaggle Kernels
 - **Data Manipulation & Scientific Computing:** NumPy, Pandas
 - **Exploratory Data Analysis & Visualization:** Matplotlib, Seaborn
@@ -91,10 +47,10 @@ Machine-Learning-Algorithms/
 | # | Project | Task / Domain | Key Challenges & Focus | Primary Methods & Models | Directory |
 |:---:|:---|:---|:---|:---|:---:|
 | **01** | **Wild Blueberry Yield Prediction** | Tabular Regression (Agricultural) | Multicollinear weather variables, non-linear bee population dynamics | Correlation pruning, feature scaling, continuous linear and ensemble regression | [`01-blueberry-yield-prediction/`](https://github.com/aysgard/Machine-Learning-Algorithms/blob/main/01-blueberry-yield-prediction.ipynb) |
-| **02** | **Abstract Multi-Class Classification** | 4-Class Classification (Synthetic) | 27 abstract features with random noise columns, redundant linear combinations, and missing values | Mutual information, VIF collinearity pruning, missing value imputation, multi-class model benchmarking | [`02-multiclass-noise-filtering/`](./02-multiclass-noise-filtering) |
-| **03** | **Mixed-Type Abstract Regression** | Continuous Regression (Synthetic) | Complex target interactions, mixed types (continuous, ranked ordinal, nominal), high missingness | Custom ordinal rank mapping, one-hot nominal encoding, Linear Regression, Polynomial Regression, SVR, MLP | [`03-mixed-type-regression/`](./03-mixed-type-regression) |
-| **04** | **Deep Tabular Classification** | Complex Non-Linear Classification (Synthetic) | High non-linearity, dirty data, significant overfitting risks | Deep MLP architectures, activation comparisons (ReLU, LeakyReLU), optimizer tuning (SGD, Adam, RMSprop), Dropout, L2 decay | [`04-deep-tabular-classification/`](./04-deep-tabular-classification) |
-| **05** | **Geometric Shape Classification** | Computer Vision (128×128 Image Classification) | 6 geometric shapes with random rotation, scale, occluding line artifacts, and diverse background noise types | Dynamic data augmentation, Conv2D, MaxPooling, Batch Normalization, learning rate schedules, Softmax CNN | [`05-shape-image-cnn/`](./05-shape-image-cnn) |
+| **02** | **Abstract Multi-Class Classification** | 4-Class Classification (Synthetic) | 27 abstract features with random noise columns, redundant linear combinations, and missing values | Mutual information, VIF collinearity pruning, missing value imputation, multi-class model benchmarking | [`02-multiclass-noise-filtering/`](https://github.com/aysgard/Machine-Learning-Algorithms/blob/main/02-multiclass-noise-filtering.ipynb) |
+| **03** | **Mixed-Type Abstract Regression** | Continuous Regression (Synthetic) | Complex target interactions, mixed types (continuous, ranked ordinal, nominal), high missingness | Custom ordinal rank mapping, one-hot nominal encoding, Linear Regression, Polynomial Regression, SVR, MLP | [`03-mixed-type-regression/`](https://github.com/aysgard/Machine-Learning-Algorithms/blob/main/03-mixed-type-regression.ipynb) |
+| **04** | **Deep Tabular Classification** | Complex Non-Linear Classification (Synthetic) | High non-linearity, dirty data, significant overfitting risks | Deep MLP architectures, activation comparisons (ReLU, LeakyReLU), optimizer tuning (SGD, Adam, RMSprop), Dropout, L2 decay | [`04-deep-tabular-classification/`](https://github.com/aysgard/Machine-Learning-Algorithms/blob/main/04-deep-tabular-classification.ipynb) |
+| **05** | **Geometric Shape Classification** | Computer Vision (128×128 Image Classification) | 6 geometric shapes with random rotation, scale, occluding line artifacts, and diverse background noise types | Dynamic data augmentation, Conv2D, MaxPooling, Batch Normalization, learning rate schedules, Softmax CNN | [`05-shape-image-cnn/`](https://github.com/aysgard/Machine-Learning-Algorithms/blob/main/05-shape-image-cnn.ipynb) |
 
 ---
 
@@ -113,7 +69,6 @@ Machine-Learning-Algorithms/
   * Assessed multicollinearity across upper and lower daily temperature bands.
   * Standardized continuous physical and weather predictors.
   * Evaluated baseline and regularized continuous regression models.
-* **Files:** `train.csv`, `test.csv`, `sample_submission.csv`
 
 ---
 
@@ -129,7 +84,6 @@ Machine-Learning-Algorithms/
   * Filtered variables using correlation thresholds and Variance Inflation Factor (VIF).
   * Evaluated statistical dependence using Mutual Information classifiers.
   * Implemented an internal validation split and benchmarked two distinct classification algorithms on both training and validation sets.
-* **Files:** `train_2.csv`, `test_2.csv`, `sample_submission_2.csv`
 
 ---
 
@@ -149,7 +103,6 @@ Machine-Learning-Algorithms/
   2. *Polynomial Regression* (Non-linear polynomial expansion)
   3. *Support Vector Regression (SVR)* (Kernel-based optimization)
   4. *Feedforward Neural Network / MLP* (Multi-layer representation learning)
-* **Files:** `train_3.csv`, `test_3.csv`, `sample_submission_3.csv`
 
 ---
 
@@ -164,7 +117,6 @@ Machine-Learning-Algorithms/
     * **Activation Functions:** Comparing convergence across ReLU, LeakyReLU, and alternative activations.
     * **Optimization Algorithms:** Comparing momentum-accelerated SGD, Adam, and RMSprop.
     * **Regularization Strategies:** Applying Dropout masks and weight decay (L2 penalty) to constrain training vs. validation loss divergence.
-* **Files:** `train_4.csv`, `test_4.csv`, `sample_submission_4.csv`
 
 ---
 
@@ -186,5 +138,4 @@ Machine-Learning-Algorithms/
   * Data augmentation strategies including random affine transformations, slight rotations, and color jitter.
   * Deep Convolutional Neural Network (Conv2D $\rightarrow$ BatchNormalization $\rightarrow$ Non-linearity $\rightarrow$ Pooling $\rightarrow$ Dense Classification Head with Softmax).
   * Regularized using Dropout, weight decay, and learning rate scheduling.
-* **Files:** `class_map.csv`, `sample_submission_5.csv`, image datasets (`train/` and `test/`)
 
